@@ -17,7 +17,6 @@ const Navbar = () => {
         <Text className="text"> RESERVATIONS </Text>
         <Text className="text"> ORDER ONLINE </Text>
         <Text className="text"> LOGIN </Text>
-          
       </Flex>
     </>
   );
