@@ -9,16 +9,14 @@ const Navbar = () => {
 
   return (
     <>
-      <Flex align='center' justifyContent="space-between" padding="7">
-        <Image src={logo} />
-        <Wrap>
-          <Text fontFamily='proximanova' borderRadius='20px' border='none'> Home </Text>
-          <Spacer/>
-          <Text className="text"> About </Text>
-          <Spacer/>
-          <Text className="text"> Menu </Text>
-          <Text></Text>
-        </Wrap>
+      <Flex align='center' justifyContent="space-around" className='nav-flex'>
+        <Image className="logo" src={logo} />
+        <Text className="text"> HOME </Text>
+        <Text className="text"> ABOUT </Text>
+        <Text className="text"> MENU </Text>
+        <Text className="text"> RESERVATIONS </Text>
+        <Text className="text"> ORDER ONLINE </Text>
+        <Text className="text"> LOGIN </Text>
           
       </Flex>
     </>

@@ -1,4 +1,25 @@
 .text {
     border-radius: 20px;
     border: none;
+    font-family: 'proximanova bold';
+    font-size: 1.2rem; 
+}
+
+.logo {
+    width: 30%;
+}
+
+.nav-flex {
+    padding: 20px 250px 20px 250px;
+}
+
+@media (max-width: 960px) {
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .nav-flex {
+        padding: 20px 0 20px 0;
+    }
+    
 }

@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'promixanova light';
+    font-family: 'proximanova light';
     src: url('/proximanova light.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'promixanova regular';
+    font-family: 'proximanova regular';
     src: url('./proximanova regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'promixanova bold';
+    font-family: 'proximanova bold';
     src: url('./proximanova bold.ttf') format('truetype');
 }
