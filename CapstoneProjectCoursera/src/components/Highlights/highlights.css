@@ -1,0 +1,9 @@
+.highlights-box {
+    padding: 70px 250px 70px 250px;
+}
+
+@media (max-width: 960px) {
+    .highlights-box {
+        padding: 70px 10px 70px 10px;
+    }
+}
