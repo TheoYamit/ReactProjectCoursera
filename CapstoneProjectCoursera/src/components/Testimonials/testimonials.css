@@ -1,0 +1,16 @@
+.testimonials-box {
+    padding: 70px 250px 70px 250px;
+    background-color: 	rgba(240,240,240, 0.5);
+}
+
+@media (max-width: 960px) {
+    .testimonials-box {
+        padding: 70px 10px 70px 10px;
+    }
+}
+
+.testimonial-image-size {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+}
