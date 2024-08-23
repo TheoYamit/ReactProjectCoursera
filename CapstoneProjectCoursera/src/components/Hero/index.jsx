@@ -12,7 +12,7 @@ const Hero = () => {
           <VStack align="start">
             <Text fontSize="5xl">Little Lemon</Text>
             <Text fontSize="2xl"> Chicago </Text>
-            <Text fontSize="2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec magna odio. Nam fringilla tellus ut justo bibendum tempor.</Text>
+            <Text fontSize="2xl" fontFamily='proximanova regular'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec magna odio. Nam fringilla tellus ut justo bibendum tempor.</Text>
             <Spacer/>
             
             <Button size="lg" backgroundColor="rgba(60, 60, 60, 0.9)" color="white"> Reserve a Table </Button>

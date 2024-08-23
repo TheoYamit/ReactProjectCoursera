@@ -7,3 +7,19 @@
         padding: 70px 10px 70px 10px;
     }
 }
+
+.box-specials-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specials-text {
+    font-size: '2xl';
+    font-family: proximanova bold;
+}
+
+.image-same-size {
+    width: 350px;    
+    height: 220px;   
+    object-fit: cover;
+  }
