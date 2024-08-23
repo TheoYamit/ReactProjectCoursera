@@ -18,7 +18,7 @@ const Hero = () => {
             <Button size="lg" backgroundColor="rgba(60, 60, 60, 0.9)" color="white"> Reserve a Table </Button>
           </VStack>
           <Box>
-            <Image src={heroImage}/>
+            <Image  src={heroImage}/>
           </Box>
         </HStack>
       </Box>
