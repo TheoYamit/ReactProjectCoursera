@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import About from '../../components/HomeComponents/About';
 import Hero from '../../components/Hero';
 import Highlights from '../../components/Highlights';
 import Testimonials from '../../components/Testimonials';
+import About from '../../components/About';
 
 const Home = () => {
 
@@ -13,6 +13,7 @@ const Home = () => {
       <Hero/>
       <Highlights/>
       <Testimonials/>
+      <About/>
     </>
   )
 }
