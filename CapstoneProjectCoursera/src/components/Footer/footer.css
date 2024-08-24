@@ -1,0 +1,15 @@
+.footer-padding {
+    padding: 70px 250px 70px 250px;
+    background-color: 	rgba(179, 179, 179, 0.9);
+}
+
+@media (max-width: 960px) {
+    .footer-padding {
+        padding: 70px 10px 70px 10px;
+    }
+}
+
+.footer-logo {
+    width: 100px;
+    height: 200px;
+}
