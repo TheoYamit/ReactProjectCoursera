@@ -20,8 +20,8 @@ const Testimonials = () => {
   })
   return (
     <>
-      <Box className='testimonials-box' paddingBottom='70px'>
-        <Text align='center' fontSize='3xl' paddingTop='70px' paddingBottom='70px'> Testimonials</Text>
+      <Box className='testimonials-box' paddingBottom='150px'>
+        <Text align='center' fontSize='3xl' paddingTop='70px'> Testimonials</Text>
 
         <Grid templateColumns={testimonialsChange} gap={6}>
           <GridItem backgroundColor='rgba(239, 239, 240, 0.9)' borderRadius='10px'>
