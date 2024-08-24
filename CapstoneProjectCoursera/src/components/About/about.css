@@ -1,0 +1,48 @@
+.about-padding {
+    padding: 70px 250px 70px 250px;
+}
+
+.image-size {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+}
+
+.first-pic {
+    top: 200px;
+    left: 200px;
+    z-index: 1; 
+  }
+  
+  .second-pic {
+    bottom: 0;
+    left: 100px;
+    z-index: 2;
+  }
+
+@media (max-width: 960px) {
+    .about-padding {
+        padding: 70px 10px 70px 10px;
+    }
+
+    .image-size {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .first-pic {
+        top: 100px;
+        left: 150px;
+        z-index: 1; 
+    }
+      
+      .second-pic {
+        bottom: 0;
+        left: 50px;
+        z-index: 2;
+    }
+
+}
