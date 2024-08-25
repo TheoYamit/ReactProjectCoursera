@@ -2,8 +2,12 @@ import React from 'react';
 import './hero.css'
 import { HStack, VStack, Box, Text, Image, Button, Spacer } from '@chakra-ui/react';
 import heroImage from '../../assets/hero.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
 
   return (
     <>
@@ -15,7 +19,7 @@ const Hero = () => {
             <Text fontSize="2xl" fontFamily='proximanova regular'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec magna odio. Nam fringilla tellus ut justo bibendum tempor.</Text>
             <Spacer/>
             
-            <Button size="lg" backgroundColor="rgba(60, 60, 60, 0.9)" color="white"> Reserve a Table </Button>
+            <Button onClick={() => navigate('/Booking')} size="lg" backgroundColor="rgba(60, 60, 60, 0.9)" color="white"> Reserve a Table </Button>
           </VStack>
           <Box>
             <Image  src={heroImage}/>
