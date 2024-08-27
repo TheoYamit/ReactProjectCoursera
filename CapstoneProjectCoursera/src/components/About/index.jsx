@@ -6,7 +6,7 @@ import aboutOne from '../../assets/about1.jpg';
 import aboutTwo from '../../assets/about2.jpg';
 
 
-const About = () => {
+const About = ( {aboutRef }) => {
 
   const imageSize = useBreakpointValue({
     base: '200px',
@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <>
-      <Box w='100%' className='about-padding'>
+      <Box w='100%' className='about-padding' ref={aboutRef}>
         <HStack>
           <VStack align='start' w='50%'>
             <Text fontSize='5xl'>Little Lemon</Text>

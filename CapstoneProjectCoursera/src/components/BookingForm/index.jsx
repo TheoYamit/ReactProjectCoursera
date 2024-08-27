@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './bookingform.css'
 import { Flex, FormControl, FormLabel, FormErrorMessage, FormHelperText, Box, 
   Input, Text, Image, HStack, VStack, Button, Select } from '@chakra-ui/react';
 import reservedPic from '../../assets/reserved.jpg'
+
+import { submitAPI } from '../../functions/api';
 const BookingForm = (props) => {
 
-  const availableTimes = props.availableTimes
+  const { availableTimes, dispatch } = props;
 
-  useEffect(() => {
-    console.log(availableTimes)
-  }, [availableTimes])
+  const navigate = useNavigate();
+
+  const handleDateChange = (event) => {
+    handleInputChange(event);
+    const selectedDate = event.target.value;
+
+    dispatch({
+      type: 'UPDATE_TIMES',
+      payload: selectedDate,
+    });
+  };
 
   const [formDetails, setFormDetails] = useState({
     date: null,
@@ -30,6 +41,15 @@ const BookingForm = (props) => {
     console.log(formDetails)
   }, [formDetails])
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const isSuccess = submitAPI(formDetails);
+    if (isSuccess) {
+      navigate('/ConfirmedBooking');
+    } else {
+      alert('Failed to make a reservation. Please try again.');
+    }
+  };
 
 
 
@@ -53,7 +73,7 @@ const BookingForm = (props) => {
 
         <FormControl paddingBottom={10}>
           <FormLabel> Date </FormLabel>
-          <Input onChange={handleInputChange} name='date' type='date'></Input>
+          <Input onChange={handleDateChange} name='date' type='date'></Input>
         </FormControl>
 
         <FormControl paddingBottom={10}>
@@ -82,7 +102,7 @@ const BookingForm = (props) => {
         </FormControl>
 
         <Flex justifyContent='center'>
-          <Button> Reserve </Button>
+          <Button onClick={handleSubmit}> Reserve </Button>
         </Flex>
       </Box>
     </>

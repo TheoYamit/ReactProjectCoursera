@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import Navbar from '../../components/Navbar';
 import BookingForm from '../../components/BookingForm';
+import { fetchAPI, submitAPI } from '../../functions/api';
 
-const initializeTimes = () => ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+const updateTimes = (state, action) => {
+  switch (action.type) {
+    case 'UPDATE_TIMES':
+      return fetchAPI(new Date(action.payload));
+    default:
+      return state;
+  }
+};
 
-  const timesReducer = (state, action) => {
-    switch (action.type) {
-      case 'UPDATE_TIMES':
-        return action.payload;
-      default:
-        return state;
-    }
-  };
+const initializeTimes = () => {
+  const today = new Date();
+  return fetchAPI(today);
+};
 
 
 const Booking = () => {
-  const [availableTimes, dispatch] = useReducer(timesReducer, [], initializeTimes);
+  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
   return (
     <>
-      <Navbar/>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch}/>
+      <Navbar />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
     </>
   );
 };
