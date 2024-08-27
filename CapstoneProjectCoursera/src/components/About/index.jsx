@@ -1,15 +1,21 @@
 import React from 'react';
 import './about.css';
-import { Image, Flex, Box, Text, HStack, VStack, Spacer } from '@chakra-ui/react';
+import { Image, Flex, Box, Text, HStack, VStack,
+  useBreakpointValue, Spacer } from '@chakra-ui/react';
 import aboutOne from '../../assets/about1.jpg';
 import aboutTwo from '../../assets/about2.jpg';
 
 
-const About = () => {
+const About = ( {aboutRef }) => {
+
+  const imageSize = useBreakpointValue({
+    base: '200px',
+    lg: '350px'
+  })
 
   return (
     <>
-      <Box w='100%' className='about-padding'>
+      <Box w='100%' className='about-padding' ref={aboutRef}>
         <HStack>
           <VStack align='start' w='50%'>
             <Text fontSize='5xl'>Little Lemon</Text>
@@ -20,8 +26,8 @@ const About = () => {
               right in the heart of Chicago. </Text>
           </VStack>
           <Box position='static' align='center'>
-            <Image src={aboutOne} className='image-size first-pic'></Image>
-            <Image src={aboutTwo} className='image-size second-pic'></Image>
+            <Image w={imageSize} src={aboutOne} className='image-size first-pic'></Image>
+            <Image w={imageSize} src={aboutTwo} className='image-size second-pic'></Image>
           </Box>
         </HStack>
       </Box>

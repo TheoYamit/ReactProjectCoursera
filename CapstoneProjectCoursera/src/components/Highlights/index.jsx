@@ -6,7 +6,7 @@ import { Text, Grid, GridItem, useBreakpointValue,
 import greekSalad from '../../assets/greek-salad.jpg';
 import bruschetta from '../../assets/bruschetta.jpg';
 
-const Highlights = () => {
+const Highlights = ({ specialsRef }) => {
   const gridChange = useBreakpointValue({
     base: 'repeat(2, 1fr)',
     lg: 'repeat(3, 1fr)'
@@ -19,7 +19,7 @@ const Highlights = () => {
 
   return (
     <>
-      <Box className='highlights-box'>
+      <Box className='highlights-box' ref={specialsRef}>
         <Flex justifyContent='space-between'>
           <Text fontSize='3xl'> Specials </Text>
           <Button size='lg' backgroundColor='rgba(60, 60, 60, 0.9)' color="white"> Online Menu </Button>
